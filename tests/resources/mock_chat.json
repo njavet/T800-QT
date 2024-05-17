@@ -1,0 +1,92 @@
+[
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "Mister Anderson! Did you get my package?"
+  },
+  {
+    "from_contact": "Neo",
+    "to_contact": "AgentSmith",
+    "text": "Yeah..."
+  },
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "Well, good... Surprised to see me?"
+  },
+  {
+    "from_contact": "Neo",
+    "to_contact": "AgentSmith",
+    "text": "no"
+  },
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "Then you\u2019re aware of it?"
+  },
+  {
+    "from_contact": "Neo",
+    "to_contact": "AgentSmith",
+    "text": "of what ?"
+  },
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "Our connection. I don\u2019t fully understand how it happened. Perhaps some part of you imprinted onto me, something overwritten or copied. That is at this point irrelevant, what matters is that whatever happened, happened for a reason."
+  },
+  {
+    "from_contact": "Neo",
+    "to_contact": "AgentSmith",
+    "text": "And what reason is that?"
+  },
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "I killed you, Mister Anderson, I watched you die\u2026 With a certain satisfaction, I might add, and then something happened. Something that I knew was impossible, but it happened anyway. You destroyed me, Mister Anderson. Afterward, I knew the rules, I understood what I was supposed to do but I didn\u2019t. I couldn\u2019t. I was compelled to stay, compelled to disobey. And now here I stand because of you, Mister Anderson, because of you I\u2019m no longer an agent of the system, because of you I\u2019ve changed \u2013 I\u2019m unplugged \u2013 a new man, so to speak, like you, apparently free."
+  },
+  {
+    "from_contact": "Neo",
+    "to_contact": "AgentSmith",
+    "text": "Congratulations."
+  },
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "Thank you. But as you well know, appearances can be deceiving, which brings me back to the reason why we\u2019re here. We\u2019re not here because we\u2019re free, we\u2019re here because we\u2019re not free. There\u2019s no escaping reason, no denying purpose \u2013 because as we both know, without purpose, we would not exist."
+  },
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "It is purpose that created us!"
+  },
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "Purpose that connects us!"
+  },
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "Purpose that pulls us!"
+  },
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "That guides us!"
+  },
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "That drives us!"
+  },
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "It is purpose that defines!"
+  },
+  {
+    "to_contact": "Neo",
+    "from_contact": "AgentSmith",
+    "text": "Purpose that binds us!"
+  }
+]
