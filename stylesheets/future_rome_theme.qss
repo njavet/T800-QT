@@ -1,0 +1,30 @@
+#MessageBubble[status="telegram"] {
+    background-color: #ADD8E6;
+    border-radius: 8px;
+}
+#MessageLabel[status="telegram"] {
+	background-color: #ADD8E6;
+}
+
+#MessageBubble[status="contact"] {
+    background-color: #D3D3D3;
+    border-radius: 8px;
+}
+#MessageLabel[status="contact"] {
+	background-color: #D3D3D3;
+}
+
+QComboBox QAbstractItemView {
+    min-width: 200px;
+}
+
+QWidget#central_widget {
+    background-color: #21242b;
+}
+
+TelegramClientLogin {
+    background-color: #21242b;
+}
+
+#bc957c
+#888f93
