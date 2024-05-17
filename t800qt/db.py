@@ -9,7 +9,9 @@ logger = logging.getLogger(__name__)
 
 class BaseModel(pw.Model):
     class Meta:
-        database = None
+        data_dir_path = os.path.join(os.path.expanduser('~'), config.data_dir)
+        db_path = os.path.join(data_dir_path, config.db_name)
+        database = pw.SqliteDatabase(db_path)
 
 
 class Contact(BaseModel):
@@ -42,9 +44,6 @@ def _init_database():
     data_dir_path = os.path.join(os.path.expanduser('~'), config.data_dir)
     db_path = os.path.join(data_dir_path, config.db_name)
     database = pw.SqliteDatabase(db_path)
-    # TODO find a better solution
-    Contact._meta.database = database
-    UniChatMessage._meta.database = database
     database.connect()
     database.create_tables([Contact, UniChatMessage], safe=True)
     database.close()

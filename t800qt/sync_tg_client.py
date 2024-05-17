@@ -1,5 +1,5 @@
 from datetime import datetime
-
+import pytz
 import config
 import telethon
 from telethon.sync import TelegramClient
@@ -82,11 +82,13 @@ class SyncTelegramClient(TelegramClient):
         self.download_photo_from_tg_message(message)
 
         photo_path = self.download_photo_from_tg_message(message)
+
+        timestamp = message.date.astimezone(pytz.timezone('CET'))
         unichat_message = db.UniChatMessage.create(from_contact=from_contact,
                                                    to_contact=to_contact,
                                                    text=message.message,
                                                    photo_path=photo_path,
-                                                   timestamp=message.date)
+                                                   timestamp=timestamp)
         return unichat_message
 
     def update_remote_profile_pic(self, contact: db.Contact) -> bool:

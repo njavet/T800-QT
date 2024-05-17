@@ -3,3 +3,4 @@ python-dotenv
 telethon
 pylint
 peewee
+pytz
