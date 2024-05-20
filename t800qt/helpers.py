@@ -3,14 +3,8 @@ import itertools
 
 def format_msg(message: str, line_length: int = 64) -> str:
     """
-    The `format_msg` function splits a text message into lines of maximum line_length
-    characters each.
-    :return: The `format_msg` method returns a formatted message where the
-    original message text is split into lines with a maximum of line_length characters
-    per line. The method processes the input message text to ensure that each
-    line does not exceed the character limit and handles cases where words are
-    too long or lines are too long. The formatted message is returned as a single
-    string with line breaks.
+    The `format_msg` function splits a text message into lines of maximum
+    line_length characters each.
     """
     m_len = len(message)
     # message is smaller than line length and don't need to be changed
@@ -35,3 +29,5 @@ def format_msg(message: str, line_length: int = 64) -> str:
     first_part = ' '.join(words[:ind])
     second_part = format_msg(' '.join(words[ind:]))
     return '\n'.join([first_part, second_part])
+
+
