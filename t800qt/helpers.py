@@ -1,44 +1,37 @@
-def format_msg(message: str, line_length: int = 48) -> str:
+import itertools
+
+
+def format_msg(message: str, line_length: int = 64) -> str:
     """
-    The `format_msg` function splits a text message into lines of maximum 48
+    The `format_msg` function splits a text message into lines of maximum line_length
     characters each.
     :return: The `format_msg` method returns a formatted message where the
-    original message text is split into lines with a maximum of 48 characters
+    original message text is split into lines with a maximum of line_length characters
     per line. The method processes the input message text to ensure that each
     line does not exceed the character limit and handles cases where words are
     too long or lines are too long. The formatted message is returned as a single
     string with line breaks.
     """
-    lines = []
-    words = message.split()
-    curr = 0
-    curr_line = []
-    for i, word in enumerate(words):
-        curr += len(word)
-        # Case 1: the word is too long for a single line
-        if len(word) > line_length:
-            if len(curr_line) == 0:
-                while word:
-                    lines.append(word[:line_length])
-                    word = word[line_length:]
-            else:
-                lines.append(' '.join(curr_line))
-                while word:
-                    curr_line.append(word[:line_length])
-                    word = word[line_length:]
-                    lines.append(' '.join(curr_line))
-                curr = 0
-                curr_line = []
-        # Case 2: the line is too long and has more than 48 characters
-        elif curr > line_length:
-            curr_line.append(word)
-            lines.append(' '.join(curr_line))
-            curr = 0
-            curr_line = []
-        # Case 3: the line still has space
-        else:
-            curr_line.append(word)
+    m_len = len(message)
+    # message is smaller than line length and don't need to be changed
+    if m_len <= line_length:
+        return message
 
-    lines.append(' '.join(curr_line))
-    new_msg = '\n'.join(lines)
-    return new_msg
+    words = message.split()
+    first_word = words[0]
+    len_first_word = len(first_word)
+    # the first word of the message is longer than the line length
+    if line_length <= len_first_word:
+        first_word_part0 = first_word[:line_length]
+        first_word_part1 = first_word[line_length:]
+        msg_rest = ' '.join([first_word_part1] + words[1:])
+        return '\n'.join([first_word_part0, format_msg(msg_rest)])
+
+    # take as many words as possible for a line and solve the rest with recursion
+    words_length = [len(word) + 1 for word in words]
+    ac = itertools.accumulate(words_length, initial=-1)
+    tw = itertools.takewhile(lambda wl: wl <= line_length, ac)
+    ind = len(list(tw)) - 1
+    first_part = ' '.join(words[:ind])
+    second_part = format_msg(' '.join(words[ind:]))
+    return '\n'.join([first_part, second_part])

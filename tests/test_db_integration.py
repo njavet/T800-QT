@@ -35,11 +35,9 @@ class TestInitDatabaseIntegration(unittest.TestCase):
         self.assertIsNone(contact1)
 
     def test_get_contact(self):
-        # TODO this tests loops forever, same with get_me()
-        contact0 = db.add_contact(3, 'Platon', 'platonic')
-        contact1 = db.get_contact(3)
-        self.assertIsNotNone(contact1)
-
+        db.add_contact(3, 'Platon', 'platonic')
+        contact0 = db.get_contact(3)
+        self.assertIsNotNone(contact0)
 
 
 if __name__ == '__main__':
